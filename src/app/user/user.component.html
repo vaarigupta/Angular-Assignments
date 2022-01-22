@@ -1,0 +1,23 @@
+<!-- <input 
+type="text"
+class="form-control"
+(input)="OnEnterUsername($event)"
+>
+Passing and using data with Event Binding-->
+<input 
+type="text"
+class="form-control"
+[(ngModel)]="username"
+>
+<p 
+style="color: blueviolet;" 
+>Hey My name is 
+{{username}}
+</p>
+<button
+class="btn btn-primary"
+[disabled]="username===''"
+(click)="username=''"
+>
+Reset username
+</button>
