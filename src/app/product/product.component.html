@@ -1,0 +1,10 @@
+<button 
+class="btn btn-primary"
+(click)="ToggleDetails()"
+>Display details</button>
+<p *ngIf="IsClicked">The product is of good quality and is budget-friendly</p>
+
+<p *ngFor="let n of nums"
+[ngStyle]="{ 'background-color': bgcolor}"
+[ngClass]="{textcolor:count>=5}"
+ >Click {{count}}</p>
