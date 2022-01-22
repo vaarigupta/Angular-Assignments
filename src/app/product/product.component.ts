@@ -19,7 +19,7 @@ export class ProductComponent implements OnInit {
   {
     this.IsClicked = !this.IsClicked;
     this.count++;
-    this.bgcolor = this.count>=5?'blue':'transparent';
+    // this.bgcolor = this.count>=5?'blue':'transparent';
     this.nums.push(this.count);
   }
 
