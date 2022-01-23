@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
   
   IsClicked:boolean = false;
-  count:number = 0;
-  nums: number[] = [];
+  randomColor:string ="";
+ // count:number = 0;
+  nums:any= [];
   bgcolor:string = '';
   constructor() { }
 
@@ -18,9 +19,9 @@ export class ProductComponent implements OnInit {
   ToggleDetails()
   {
     this.IsClicked = !this.IsClicked;
-    this.count++;
-    // this.bgcolor = this.count>=5?'blue':'transparent';
-    this.nums.push(this.count);
+   //this.count++;
+    this.randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    this.nums.push(this.randomColor);
   }
 
 }

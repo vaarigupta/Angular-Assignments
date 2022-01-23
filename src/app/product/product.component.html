@@ -4,7 +4,7 @@ class="btn btn-primary"
 >Display details</button>
 <p *ngIf="IsClicked">The product is of good quality and is budget-friendly</p>
 
-<p *ngFor="let num of nums"
-[ngStyle]="{ 'background-color': num>=5?'blue':'transparent'}"
-[ngClass]="{'text-color':num>=5}"
+<p *ngFor="let num of nums; let i=index"
+[ngStyle]="{ 'background-color': i>=5? randomColor:'transparent'}"
+[ngClass]="{'text-color':i>=5}"
  > {{num}}</p>
